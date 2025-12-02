@@ -498,6 +498,21 @@ Anti-Lockout Rule: ALLOW (acesso web admin)
 - Amplamente usado em empresas
 
 ---
+## ✅ Estado Atual do Lab (01/12/2025)
+
+- pfSense configurado como gateway (NAT + LAN_SOC 192.168.1.0/24).
+- Wazuh Server (Ubuntu 22.04) rodando na versão 4.7.5 em 192.168.1.102.
+- Agentes Wazuh registrados:
+  - ID 001 – ubuntu-lab – status: Disconnected quando a VM está desligada.
+  - ID 003 – DC01 – status: Active quando o Windows Server está ligado.
+- Splunk Enterprise instalado e em execução no DC01:
+  - Serviço `Splunkd` em estado Running.
+  - Interface web acessível em http://192.168.1.51:8000 e http://127.0.0.1:8000 dentro do DC01.
+- Sysmon instalado e gerando eventos no DC01.
+- Rede SOC isolada via Internal Network no VirtualBox.
+- Kali Linux configurado como atacante na mesma LAN, sem agente Wazuh por decisão de design.
+
+---
 
 ## 🔐 Princípios de Segurança
 
@@ -508,6 +523,16 @@ Anti-Lockout Rule: ALLOW (acesso web admin)
 5. **Hardening:** Configurações seguras em todos componentes
 
 ---
+
+## 💾 Pontos de Restauração (Snapshots)
+
+Para garantir segurança e possibilidade de rollback, foram criados snapshots em 01/12/2025:
+
+- `01 - Ubuntu Lab - Funcionando após configuração - 01/12/2025`
+- `02 - Wazuh Server - Tudo funcionando - 01/12/2025`
+- `03 - Windows DC01 - Agente funcionando - 01/12/2025`
+
+Esses snapshots representam um estado estável do ambiente, com comunicação validada entre agentes e servidor.
 
 ## 📌 Conclusão
 
