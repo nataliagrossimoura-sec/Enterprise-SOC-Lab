@@ -182,9 +182,11 @@ Este laboratório demonstra competências práticas de **Analista SOC**, **Blue 
 ### Documentação Completa
 
 Para guia passo a passo detalhado, consulte:
-- 📖 **[INSTALLATION.md](INSTALLATION.md)** - Guia completo de instalação
-- 🏗️ **[ARCHITECTURE.md](ARCHITECTURE.md)** - Detalhes da arquitetura
-- 📁 **[docs/](docs/)** - Documentação técnica por componente
+-- 📖 [INSTALAÇÃO.md](INSTALAÇÃO.md)
+- 🏗️ [ARQUITETURA.md](ARQUITETURA.md)
+- 📜 [COMANDOS_UTILIZADOS.md](COMANDOS_UTILIZADOS.md)
+- 🧪 [EXERCICIOS_PRÁTICOS.md](EXERCICIOS_PRÁTICOS.md)
+
 
 ---
 
@@ -285,7 +287,7 @@ index=sysmon EventCode=3 DestinationIp!=192.168.*
 index=sysmon EventCode=1 | stats count by Image | sort -count | head 10
 ```
 
-Para lista completa: **[COMMANDS_USED.md](COMMANDS_USED.md)**
+Para lista completa: **[COMANDOS_UTILIZADOS.md](COMANDOS_UTILIZADOS.md)**
 
 ---
 
@@ -405,7 +407,7 @@ powershell -enc <base64_encoded_command>
 # Buscar no Splunk: index=sysmon EventCode=1 CommandLine="*-enc*"
 ```
 
-Ver todos: **[docs/11-exercicios-praticos.md](docs/11-exercicios-praticos.md)**
+Ver todos: **[EXERCÍCIOS_PRÁTICOS.md](EXERCÍCIOS_PRÁTICOS.md)**
 
 ---
 
@@ -494,15 +496,15 @@ Analista de Cibersegurança | SOC | Blue Team
 Apaixonada por segurança defensiva, detecção de ameaças e análise forense. Este laboratório representa minha jornada de transição para Cibersegurança, demonstrando habilidades práticas e conhecimento teórico aplicado.
 
 📧 **Contato:**  
-- LinkedIn: [seu-perfil-linkedin]  
-- GitHub: [@seu-usuario]  
-- Email: seu.email@example.com
+- LinkedIn: [Natália Grossi](https://www.linkedin.com/in/SEU-LINK-AQUI)
+- GitHub: [@nataliagrossimoura-sec](https://github.com/nataliagrossimoura-sec)
+- Email: seu-email-real
 
 ---
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENÇA](LICENÇA) para detalhes.
 
 ---
 
@@ -531,7 +533,7 @@ Sugestões e melhorias são bem-vindas!
 
 **⭐ Se este projeto foi útil, considere dar uma estrela!**
 
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=seu-usuario.enterprise-soc-lab)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=nataliagrossimoura-sec.enterprise-soc-lab)
 
-**Última atualização:** Novembro 2025
+**Última atualização:** Dezembro 2025
 **Status:** 🟢 Ativo e em evolução
