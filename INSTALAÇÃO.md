@@ -614,7 +614,7 @@ ip addr show
 # No Windows DC01 (PowerShell como Admin)
 Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.8.0-1.msi -OutFile wazuh-agent.msi
 
-msiexec /i wazuh-agent.msi /q WAZUH_MANAGER="192.168.1.102" WAZUH_AGENT_NAME="DC01"
+& "C:\Program Files (x86)\ossec-agent\agent-auth.exe" -m 192.168.1.102 -k "<sua_key>"
 
 # Iniciar serviço
 NET START WazuhSvc
@@ -638,7 +638,7 @@ echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4
 sudo apt update
 
 # Instalar agente
-sudo WAZUH_MANAGER="192.168.1.102" apt install wazuh-agent -y
+sudo apt install wazuh-agent -y
 
 # Iniciar e habilitar
 sudo systemctl daemon-reload
@@ -702,7 +702,7 @@ sudo systemctl status wazuh-agent
 # Abrir PowerShell como Admin
 cd "C:\Program Files\Splunk\bin"
 
-# Configurar para receber dados na porta 9997
+# Configurar para receber dados na porta 9997 "OPCIONAL"
 .\splunk enable listen 9997 -auth admin:<sua_senha>
 
 # Verificar
